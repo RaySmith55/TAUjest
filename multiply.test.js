@@ -3,6 +3,9 @@ const multiply = require('./multiply');
 describe('test multiply scenarios', () => {
     test('multiply 3 * 2 should give 6', () => {
         expect(multiply(3, 2)).toBe(6);
+        expect(multiply(3, 2)).toBeGreaterThan(5);
+        expect(multiply(3, 2)).toBeLessThan(7);
+        expect(multiply(3, 2)).toBeLessThanOrEqual(6);
     });
     test('multiple 4 * 3 should not give 11', () => {
         expect(multiply(4, 3)).not.toBe(11);
